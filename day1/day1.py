@@ -10,13 +10,13 @@ with open("day1_input", mode="r") as fh:
     for line in fh:
         depth_measurement.append(int(line.strip()))
 
-# print(depth_measurement)
-
-# compare lines and add to total count
 depth_increase_counter = 0
 
-for a, b in zip(depth_measurement, depth_measurement[1:]):
-    if b > a:
+# loop over each index of the list. Range stop 1 below the last, need to subtract one more for the comparison.
+for line in range(len(depth_measurement) -1):
+    depth_a = depth_measurement[line]
+    depth_b = depth_measurement[line + 1]
+    if depth_b > depth_a:
         depth_increase_counter += 1
 
 print(depth_increase_counter)
