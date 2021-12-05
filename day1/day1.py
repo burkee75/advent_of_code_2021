@@ -2,7 +2,6 @@
 # How many measurements are larger than the previous measurement using day1_input?
 
 import os
-import itertools
 
 depth_measurement = []
 
